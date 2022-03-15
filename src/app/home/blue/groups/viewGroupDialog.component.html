@@ -1,0 +1,47 @@
+ 
+<h2 mat-dialog-title>Group</h2> 
+<mat-dialog-content class="mat-typography"> 
+
+<div class="tin-input" style="font-size:12px"> 
+
+<mat-form-field> 
+<mat-label>Group ID</mat-label> 
+<input matInput autocomplete="off" [(ngModel)]="group.groupID" placeholder="Enter Group ID"/> 
+</mat-form-field> 
+
+<mat-form-field> 
+<mat-label>Group Name</mat-label> 
+<input matInput autocomplete="off" [(ngModel)]="group.groupName" placeholder="Enter Group Name"/> 
+</mat-form-field> 
+
+<mat-form-field> 
+<mat-label>Created Date</mat-label> 
+<input matInput autocomplete="off" [(ngModel)]="group.createdDate" placeholder="Enter Created Date"/> 
+</mat-form-field> 
+
+<mat-form-field> 
+<mat-label>Created By</mat-label> 
+<input matInput autocomplete="off" [(ngModel)]="group.createdBy" placeholder="Enter Created By"/> 
+</mat-form-field> 
+
+<mat-form-field> 
+<mat-label>Updated Date</mat-label> 
+<input matInput autocomplete="off" [(ngModel)]="group.updatedDate" placeholder="Enter Updated Date"/> 
+</mat-form-field> 
+
+<mat-form-field> 
+<mat-label>Updated By</mat-label> 
+<input matInput autocomplete="off" [(ngModel)]="group.updatedBy" placeholder="Enter Updated By"/> 
+</mat-form-field> 
+
+</div> 
+
+</mat-dialog-content> 
+
+<mat-dialog-actions> 
+<button mat-button [disabled]="isProcessing" (click)="submit()" cdkFocusInitial>Submit</button> 
+<button mat-button mat-dialog-close>Cancel</button> 
+</mat-dialog-actions> 
+
+
+

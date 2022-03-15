@@ -1,4 +1,75 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
+body {
+  margin: 0;
+  /*font-family: Roboto, "Helvetica Neue", sans-serif;*/
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+table {
+  width: 100%;
+}
+
+.list-group {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tin-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.tin-input > * {
+    width: 100%;
+}
+
+
+
+.tin-bg-color {
+  background-color: #f2f7ff;
+  background-size: 100%;
+  background-size: 100%;
+  min-height: 100%;
+  height: auto;
+}
+
+.tin-bg-image {
+  background-image: url("~/assets/app-bg.jpg");
+  background-size: 100%;
+  background-repeat: repeat-y;
+  background-size: 100%;
+  min-height: 100%;
+  height: auto;
+}
+
+.tin-input-row {
+  display: flex;
+  flex-direction: row !important;
+  align-content: center !important;
+  align-items: center !important;
+}
+
+.tin-row {
+  display: flex;
+  flex-direction: row !important;
+
+}
+
+.refreshIcon {
+  font-size: 22px !important;
+  margin-top: -7px !important;
+}
+
+.datetime {
+  width: 170px
+}
+
+.refNum {
+  width: 150px
+}
+
+html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

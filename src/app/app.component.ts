@@ -1,4 +1,8 @@
+import { HttpService } from 'tin-core';
+import { DataService } from './services/data.service';
 import { Component } from '@angular/core';
+// import * as data from './locations.json';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'basic-app';
+
+  constructor(public dataService: DataService,  private httpService: HttpService){}
+  ngOnInit() {
+    // console.log("started")
+    // console.log(data.config.header)
+
+  }
+  title = 'wallet-spa';
+
 }

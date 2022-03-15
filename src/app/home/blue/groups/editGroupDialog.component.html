@@ -1,0 +1,24 @@
+
+<h2 mat-dialog-title>Group</h2>
+<mat-dialog-content class="mat-typography">
+
+<div class="tin-input" style="font-size:12px">
+
+
+<mat-form-field>
+<mat-label>Group Name</mat-label>
+<input matInput autocomplete="off" [(ngModel)]="group.groupName" placeholder="Enter Group Name"/>
+</mat-form-field>
+
+
+</div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+<button mat-button [disabled]="isProcessing" (click)="submit()" cdkFocusInitial>Submit</button>
+<button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>
+
+
+
