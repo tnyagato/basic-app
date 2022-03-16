@@ -15,7 +15,7 @@ export class DataService {
     let url = new URL(window.location.href);
 
     if (url.host.includes('localhost')) {
-      httpService.apiUrl = "https://localhost:44380/";
+      httpService.apiUrl = "https://localhost:44306/";
     } else {
       httpService.apiUrl = `${url.protocol}//${url.host}/api/`;
     }
