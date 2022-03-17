@@ -1,8 +1,7 @@
 import { HttpService } from 'tin-core';
 import { Injectable } from '@angular/core';
 import { CapItem, AppConfig } from 'tin-spa';
-import { Contact, Customer, Group } from '../classes/Classes';
-
+import { Group } from '../classes/Classes';
 
 @Injectable({
   providedIn: 'root'
@@ -15,14 +14,13 @@ export class DataService {
     let url = new URL(window.location.href);
 
     if (url.host.includes('localhost')) {
-      httpService.apiUrl = "https://localhost:44306/";
+      httpService.apiUrl = "https://localhost:44380/";
     } else {
       httpService.apiUrl = `${url.protocol}//${url.host}/api/`;
     }
 
 
     //Role Capabilities
-
 
     this.appConfig.appName = "Basic App";
     this.appConfig.logo = "./assets/icon.png"
@@ -60,19 +58,6 @@ export class DataService {
     this.capGroups.display = "Groups";
     this.capGroups.link = "home/groups";
 
-    this.capContact_add.name = "cap11"
-    this.capContact_add.display = "Contact Add";
-    this.capContact_add.showMenu = false;
-
-    this.capContact_edit.name = "cap12"
-    this.capContact_edit.display = "Contact Edit";
-    this.capContact_edit.showMenu = false;
-
-    this.capContact_delete.name = "cap13"
-    this.capContact_delete.display = "Contact Delete";
-    this.capContact_delete.showMenu = false;
-
-
 
   }
 
@@ -94,38 +79,14 @@ export class DataService {
 
   // Groups
   UpdateGroup(group: Group, action: string) {
-    return this.httpService.Post('Contacts/UpdateGroup?action=' + action, group);
+    return this.httpService.Post('Groups/UpdateGroup?action=' + action, group);
   }
 
 
   GetGroup(by: string, val: string) {
-    return this.httpService.Get('Contacts/GetGroup?by=' + by + '&val=' + val);
+    return this.httpService.Get('Groups/GetGroup?by=' + by + '&val=' + val);
   }
 
-
-  // Customers
-  UpdateCustomer(customer: Customer, action: string) {
-    return this.httpService.Post('Contacts/UpdateCustomer?action=' + action, customer);
-  }
-
-
-  GetCustomer(by: string, val: string) {
-    return this.httpService.Get('Contacts/GetCustomer?by=' + by + '&val=' + val);
-  }
-
-  SearchCustomer(customer: Customer) {
-    return this.httpService.Post('Contacts/SearchCustomer', customer);
-  }
-
-  // Contacts
-  UpdateContact(contact: Contact, action: string) {
-    return this.httpService.Post('Contacts/UpdateContact?action=' + action, contact);
-  }
-
-
-  GetContact(by: string, val: string) {
-    return this.httpService.Get('Contacts/GetContact?by=' + by + '&val=' + val);
-  }
 
 
 }
