@@ -16,7 +16,9 @@ export class DataService {
     if (url.host.includes('localhost')) {
       httpService.apiUrl = "https://localhost:44380/";
     } else {
-      httpService.apiUrl = `${url.protocol}//${url.host}/api/`;
+      // httpService.apiUrl = `${url.protocol}//${url.host}/api/`;
+      httpService.apiUrl = `https://tin-basic-api.azurewebsites.net/`;
+
     }
 
 
